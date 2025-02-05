@@ -89,10 +89,27 @@ def remove_heic_files(directory):
                 except Exception as e:
                     print(f"Error deleting {file_path}: {e}")
 
+def remove_non_jpg(directory: str):
+    """
+    Recursively removes all files that are not JPG from the specified directory.
+    :param directory: Path to the directory to clean up.
+    """
+    for root, _, files in os.walk(directory):
+        for file in files:
+            if not file.lower().endswith(".jpg"):
+                file_path = os.path.join(root, file)
+                try:
+                    os.remove(file_path)
+                    print(f"Removed: {file_path}")
+                except Exception as e:
+                    print(f"Error removing {file_path}: {e}")
+
+
 if __name__ == "__main__":
     current_directory = os.getcwd()  # Get current working directory
-    remove_heic_files(current_directory)
-    print("HEIC file removal completed!")
+    remove_non_jpg("./azuran")
+    # remove_heic_files(current_directory)
+    # print("HEIC file removal completed!")
     # remove_parentheses_in_path(current_directory)
     # print("Renaming completed!")
     # remove_whitespaces_in_path(current_directory)

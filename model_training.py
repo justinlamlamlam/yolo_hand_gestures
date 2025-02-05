@@ -4,7 +4,7 @@ from ultralytics import YOLO
 model = YOLO("yolo11n.pt")
 
 # Train the model
-model.train(data="/home/justinlamlamlam/warwick/es3h3/raw_dataset/data.yaml", epochs=50)
+model.train(data="/home/justinlamlamlam/warwick/es3h3/full_dataset/data.yaml", epochs=50)
 
 # Validate on training data
 model.val()

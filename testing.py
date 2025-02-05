@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2
 
 # Load the trained YOLO model
-model_path = "runs/detect/train/weights/best.pt"  # Path to trained model
+model_path = "runs/detect/train3/weights/best.pt"  # Path to trained model
 model = YOLO(model_path)
 
 # Load the video

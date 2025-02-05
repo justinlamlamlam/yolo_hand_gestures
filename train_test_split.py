@@ -63,8 +63,8 @@ def split_data(images_dir, labels_dir, split_ratio=0.9):
     print(f"Train-Val split completed: {len(train_files)} files for training, {len(val_files)} files for validation.")
 
 if __name__ == "__main__":
-    images_dir = "raw_dataset/images"  # Path to images directory
-    labels_dir = "raw_dataset/labels"  # Path to labels directory
+    images_dir = "full_dataset/images"  # Path to images directory
+    labels_dir = "full_dataset/labels"  # Path to labels directory
     
     # Perform the data split
     split_data(images_dir, labels_dir)
